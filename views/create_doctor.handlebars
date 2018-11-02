@@ -1,0 +1,29 @@
+   <h2>Crear un Nuevo Doctor</h2>
+   <p style="color:green;">{{message}}</p>
+ <form action="../doctor/new" method="POST">
+  <div class="form-group">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="firstname" id="firstname" value="" placeholder="Introduzca el nombre" class="form-control">
+  </div> 
+  <div class="form-group">
+    <label for="apellido">Apellido:</label>
+    <input type="text" name="lastname" id="lastname" value="" placeholder="Introduzca el Apellido" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="telefono">Teléfono:</label>
+    <input type="text" name="phone" id="phone" value="" placeholder="Introduzca el teléfono" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="mail">Correro:</label>
+    <input type="email" name="mail" id="mail" value="" placeholder="Introduzca el correo" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="HourStart">Hora de Inicio:</label>
+    <input type="text" name="horainicio" id="horainicio" value="" placeholder="Introduzca la hora de inicio" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="HourEnd">Hora de Fin:</label>
+    <input type="text" name="horafin" id="horafin" value="" placeholder="Introduzca la hora de fin" class="form-control">
+  </div>
+  <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,37 @@
+</br>
+<a href="/doctor/new">Crear Doctor</a>
+</br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Teléfono</th>
+      <th scope="col">Email</th>
+      <th scope="col">Hora Inicial</th>
+      <th scope="col">Hora Final</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each list}}
+    <tr>
+      <td>{{firstName}}</td>
+      <td>{{lastName}}</td>
+      <td>{{phone}}</td>
+      <td>{{email}}</td>
+      <td>{{starthour}}</td>
+      <td>{{endhour}}</td>
+      <td>
+        <button type="button" class="btn btn-primary"></span>Edit
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Delete
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
