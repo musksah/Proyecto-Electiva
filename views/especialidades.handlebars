@@ -1,0 +1,25 @@
+</br>
+<a href="/especialidad/new">Crear Especialidad</a>
+</br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Especialidad</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each list}}
+    <tr>
+      <td>{{name}}</td>
+    <td>
+        <button type="button" class="btn btn-primary"></span>Edit
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Delete
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
