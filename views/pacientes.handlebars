@@ -1,0 +1,39 @@
+</br>
+<a href="/paciente/new">Crear Paciente</a>
+</br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellido</th>
+      <th scope="col">Fecha Nacimiento</th>
+      <th scope="col">Genero</th>
+      <th scope="col">Dirección</th>
+      <th scope="col">Email</th>
+      <th scope="col">Estado Civil</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each list}}
+    <tr>
+      <td>{{Name}}</td>
+      <td>{{surname}}</td>
+      <td>{{birth}}</td>
+      <td>{{gender}}</td>
+      <td>{{address}}</td>
+      <td>{{mail}}</td>
+      <td>{{civilStatus}}</td>
+      <td>
+        <button type="button" class="btn btn-primary"></span>Edit
+        </button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger">Delete
+        </button>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

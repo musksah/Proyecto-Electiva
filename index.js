@@ -81,6 +81,37 @@ app.post('/especialidad/new', function (req,res){
     res.render('create_especialidad',{'message':'Se guardo correctamente la especialidad'});
 });
 
+
+app.get('/pacientes', function (req, res) {
+    var list;
+    db.ref("pacientes").on("value",function(snapshot){
+        list=snapshot.val()
+    })
+    res.render('pacientes',{'list':list});
+});
+
+app.get('/paciente/new', function (req, res) {
+    res.render('create_paciente');
+});
+
+app.post('/paciente/new', function (req, res) {
+    var newPaciente = {
+        Name:req.body.Name,
+        SurName:req.body.surname,
+        birth:req.body.birth,
+        gender:req.body.gender,
+        address:req.body.address,
+        mail:req.body.mail,
+        civilStatus:req.body.civilstatus
+    }
+    db.ref("pacientes").push(newPaciente);
+    console.log('Se intento guardar: ',req.body);    
+    res.render('create_paciente',{'message':'¡Se guardó correctamente el paciente!'});
+});
+
+
+
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
